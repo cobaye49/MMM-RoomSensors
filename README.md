@@ -110,10 +110,8 @@ sudo systemctl start sensor_service.service
 ```bash
 sudo systemctl status sensor_service.service
 ```
+You can access the sensor server at ```http://<pi-zero-ip>:5000/data```.
 
-```nginx
-You can access the sensor server at `http://<pi-zero-ip>:5000/data`.
-```
 ---
 
 ### Step 3 – Install the MMM-RoomSensors module on your MagicMirror (Pi 4)
