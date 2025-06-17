@@ -184,6 +184,29 @@ or
   }
 },
 ```
+or
+```bash
+{
+  module: "MMM-RoomSensors",
+  position: "top_left",
+  config: {
+    refreshInterval: 30, // en secondes
+    sensors: [
+      {
+        name: "Salon",
+        type: "local",
+        pin: 4
+      },
+      {
+        name: "Chambre",
+        type: "remote",
+        url: "http://ip-du-pi-zero:5000/api"
+      }
+    ],
+    showIcons: true
+  }
+},
+```
 
 3. Save and exit (Ctrl+O, Enter, Ctrl+X).
 
