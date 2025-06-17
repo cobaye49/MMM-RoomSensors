@@ -1,0 +1,1 @@
+/* Node helper pour communication backend */

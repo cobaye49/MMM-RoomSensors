@@ -1,0 +1,15 @@
+[Unit]
+Description=Sensor Service for RoomSensors
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/sensor_service/app.py
+WorkingDirectory=/home/pi/sensor_service
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

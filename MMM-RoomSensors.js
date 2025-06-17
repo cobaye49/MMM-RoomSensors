@@ -1,0 +1,1 @@
+/* JS du module principal - raccourci pour l'exemple */
