@@ -139,7 +139,6 @@ nano ~/MagicMirror/config/config.js
 ```
 
 2. Add this module config
-Remplace pi-zero-ip with the actual IP address of your PI Zero
 
 ```js
 {
@@ -157,7 +156,7 @@ Remplace pi-zero-ip with the actual IP address of your PI Zero
       {
         name: "Remote Room",
         type: "remote",
-        url: "http://<pi-zero-ip>:5000/data"
+        url: "http://<pi-zero-ip>:5000/data" //Remplace pi-zero-ip with the actual IP address of your PI Zero
       }
     ]
   }
