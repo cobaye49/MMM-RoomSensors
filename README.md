@@ -162,6 +162,28 @@ nano ~/MagicMirror/config/config.js
   }
 },
 ```
+or
+```bash
+{
+  module: "MMM-RoomSensors",
+  position: "top_right",
+  config: {
+    sensors: [
+      {
+        name: "Salon",
+        url: "http://localhost:5000/data", // pour la sonde locale
+        icon: "fa-house"
+      },
+      {
+        name: "Chambre",
+        url: "http://192.168.1.55:5000/data", // remplace par l'IP de ton Pi Zero
+        icon: "fa-bed"
+      }
+    ],
+    updateInterval: 60 * 1000 // en ms : ici toutes les 60 sec
+  }
+},
+```
 
 3. Save and exit (Ctrl+O, Enter, Ctrl+X).
 
