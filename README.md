@@ -3,16 +3,20 @@
 MMM-RoomSensors is a MagicMirror² module to display temperature and humidity readings from multiple Raspberry Pi sensors located in different rooms. It combines local sensor data and remote sensor data via a simple HTTP API.
 
 
- 🌡️ Températures       
+```pgsql
+╔══════════════════════════════╗
+║        🌡️ Temperature        ║
+╠══════════════════════════════╣
+║ 🏠 Living Room               ║
+║   🌡️ Temperature   22.3 °C   ║
+║   💧 Humidity   : 48.7 %     ║
+╠══════════════════════════════╣
+║ 🛏️ Bedroom                   ║
+║   🌡️ Temperature   22.3 °C   ║
+║   💧 Humidity   : 48.7 %     ║
+╚══════════════════════════════╝
 
- 🏠 Salon                     
-   🌡️ Température : 22.3 °C   
-   💧 Humidité   : 48.7 %     
-
- 🛏️ Chambre                   
-   🌡️ Température : 20.1 °C   
-   💧 Humidité   : 51.2 %     
-
+```
 
 
 ---
