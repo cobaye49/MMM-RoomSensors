@@ -171,41 +171,18 @@ or
     sensors: [
       {
         name: "Salon",
-        url: "http://localhost:5000/data", // pour la sonde locale
+        url: "http://localhost:5000/data", // pour la sonde branchée localement sur le Pi 4
         icon: "fa-house"
       },
       {
         name: "Chambre",
-        url: "http://192.168.1.55:5000/data", // remplace par l'IP de ton Pi Zero
+        url: "http://192.168.1.55:5000/data", // IP de ton Pi Zero
         icon: "fa-bed"
       }
     ],
-    updateInterval: 60 * 1000 // en ms : ici toutes les 60 sec
+    updateInterval: 60 * 1000 // en millisecondes : ici toutes les 60 sec
   }
-},
-```
-or
-```bash
-{
-  module: "MMM-RoomSensors",
-  position: "top_left",
-  config: {
-    refreshInterval: 30, // en secondes
-    sensors: [
-      {
-        name: "Salon",
-        type: "local",
-        pin: 4
-      },
-      {
-        name: "Chambre",
-        type: "remote",
-        url: "http://ip-du-pi-zero:5000/api"
-      }
-    ],
-    showIcons: true
-  }
-},
+}
 ```
 
 3. Save and exit (Ctrl+O, Enter, Ctrl+X).
