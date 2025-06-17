@@ -59,7 +59,7 @@ mkdir ~/sensor_service
 cd ~/sensor_service
 ```
 
-5. Copy the Python files (app.py, sensor.py, __init__.py) into this folder.
+5. Copy the Python files (app.py, sensor.py) into this folder.
 (These files run a small Python web server that reads sensor data and serves it over the network.)
 
 6. Create a Python virtual environment and install dependencies:
