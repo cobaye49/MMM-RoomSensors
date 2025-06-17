@@ -3,18 +3,10 @@
 MMM-RoomSensors is a MagicMirror² module to display temperature and humidity readings from multiple Raspberry Pi sensors located in different rooms. It combines local sensor data and remote sensor data via a simple HTTP API.
 
 
-```pgsql
-╔══════════════════════════════╗
-║        🌡️ Temperature        ║
-╠══════════════════════════════╣
-║ 🏠 Living Room               ║
-║   🌡️ Temperature   22.3 °C   ║
-║   💧 Humidity   : 48.7 %     ║
-╠══════════════════════════════╣
-║ 🛏️ Bedroom                   ║
-║   🌡️ Temperature   22.3 °C   ║
-║   💧 Humidity   : 48.7 %     ║
-╚══════════════════════════════╝
+```mathematica
+🏠 Salon       🌡️ 23.4°C   💧 46%
+🛏️ Chambre     🌡️ 21.8°C   💧 52%
+
 
 ```
 
@@ -145,44 +137,22 @@ nano ~/MagicMirror/config/config.js
   module: "MMM-RoomSensors",
   position: "top_right",
   config: {
-    refreshInterval: 30000, // refresh every 30 seconds
-    sensors: [
-      {
-        name: "Living Room",
-        type: "local",
-        sensorType: "dht22",
-        gpioPin: 4
-      },
-      {
-        name: "Remote Room",
-        type: "remote",
-        url: "http://<pi-zero-ip>:5000/data" //Replace pi-zero-ip with the actual IP address of your PI Zero
-      }
-    ]
-  }
-},
-```
-or
-```bash
-{
-  module: "MMM-RoomSensors",
-  position: "top_right",
-  config: {
     sensors: [
       {
         name: "Salon",
-        url: "http://localhost:5000/data", // pour la sonde branchée localement sur le Pi 4
+        url: "http://localhost:5000/data",
         icon: "fa-house"
       },
       {
         name: "Chambre",
-        url: "http://192.168.1.55:5000/data", // IP de ton Pi Zero
+        url: "http://192.168.1.55:5000/data",
         icon: "fa-bed"
       }
     ],
-    updateInterval: 60 * 1000 // en millisecondes : ici toutes les 60 sec
+    updateInterval: 60 * 1000,
+    showIcons: true
   }
-}
+},
 ```
 
 3. Save and exit (Ctrl+O, Enter, Ctrl+X).
